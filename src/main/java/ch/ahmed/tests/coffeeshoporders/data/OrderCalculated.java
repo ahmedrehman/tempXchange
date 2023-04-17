@@ -1,28 +1,31 @@
 package ch.ahmed.tests.coffeeshoporders.data;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrderCalculated {
+public class OrderCalculated implements Serializable {
 	private Order order;
 	private List<OrderPriceReduction> priceReductions = new ArrayList<OrderPriceReduction>();
 	private double totalCost;
 	private double totalReduction;
 	private double total;
+
 	public OrderCalculated() {
-		
+
 	}
+
 	public OrderCalculated(Order order) {
-		this.order=order;
+		this.order = order;
 	}
-	
+
 	public OrderPriceReduction addPriceReduction(double priceReduction, String reason) {
 		OrderPriceReduction reduction = new OrderPriceReduction(getPriceReductions().size() + 1, priceReduction,
 				reason);
 		getPriceReductions().add(reduction);
 		return reduction;
 	}
-	
+
 	public List<OrderPriceReduction> getPriceReductions() {
 		return priceReductions;
 	}
@@ -30,7 +33,6 @@ public class OrderCalculated {
 	public void setPriceReductions(List<OrderPriceReduction> priceReductions) {
 		this.priceReductions = priceReductions;
 	}
-	
 
 	public Order getOrder() {
 		return order;

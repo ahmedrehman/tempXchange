@@ -2,8 +2,11 @@ R:\ahmed\eclipse-workspacett\coffeeshoporders\src\main\java\ch\ahmed\tests\coffe
 R:\ahmed\eclipse-workspacett\coffeeshoporders\src\main\java\ch\ahmed\tests\coffeeshoporders\App.java
 R:\ahmed\eclipse-workspacett\coffeeshoporders\src\main\java\ch\ahmed\tests\coffeeshoporders\data\Order.java
 R:\ahmed\eclipse-workspacett\coffeeshoporders\src\main\java\ch\ahmed\tests\coffeeshoporders\data\OrderItem.java
+R:\ahmed\eclipse-workspacett\coffeeshoporders\src\main\java\ch\ahmed\tests\coffeeshoporders\data\OrderCalculated.java
 R:\ahmed\eclipse-workspacett\coffeeshoporders\src\main\java\ch\ahmed\tests\coffeeshoporders\data\ProductExtra.java
-R:\ahmed\eclipse-workspacett\coffeeshoporders\src\main\java\ch\ahmed\tests\coffeeshoporders\service\OrderManager.java
 R:\ahmed\eclipse-workspacett\coffeeshoporders\src\main\java\ch\ahmed\tests\coffeeshoporders\data\Product.java
 R:\ahmed\eclipse-workspacett\coffeeshoporders\src\main\java\ch\ahmed\tests\coffeeshoporders\data\ProductVariant.java
+R:\ahmed\eclipse-workspacett\coffeeshoporders\src\main\java\ch\ahmed\tests\coffeeshoporders\util\ShopUtils.java
 R:\ahmed\eclipse-workspacett\coffeeshoporders\src\main\java\ch\ahmed\tests\coffeeshoporders\data\OrderPriceReduction.java
+R:\ahmed\eclipse-workspacett\coffeeshoporders\src\main\java\ch\ahmed\tests\coffeeshoporders\util\Utils.java
+R:\ahmed\eclipse-workspacett\coffeeshoporders\src\main\java\ch\ahmed\tests\coffeeshoporders\service\Shop.java

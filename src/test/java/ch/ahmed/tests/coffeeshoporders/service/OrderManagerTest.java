@@ -13,42 +13,12 @@ import ch.ahmed.tests.coffeeshoporders.data.Product;
 import ch.ahmed.tests.coffeeshoporders.data.ProductCategory;
 import ch.ahmed.tests.coffeeshoporders.data.ProductExtra;
 import ch.ahmed.tests.coffeeshoporders.data.ProductVariant;
+import ch.ahmed.tests.coffeeshoporders.util.ShopUtils;
 
 public class OrderManagerTest {
 	@Before
 	public void setupShopData() {
-		List<Product> products = new ArrayList();
-		List<ProductVariant> variants = new ArrayList();
-		List<ProductExtra> extras = new ArrayList();
-
-		// Coffee
-		extras.add(new ProductExtra("EXTRA_MILK", "Extra milk", 0.30d));
-		extras.add(new ProductExtra("FOAMED_MILK", "Foamed milk", 0.50d));
-		extras.add(new ProductExtra("SPEACIAL_ROAST_COFFEE", "Special roast coffee", 0.90d));
-		
-		variants.add(new ProductVariant("COFFEE_SMALL", ProductCategory.BEWERAGE, "Coffee (small)", 2.50d, extras));
-		variants.add(new ProductVariant("COFFEE_MEDIUM", ProductCategory.BEWERAGE, "Coffee (medium)", 3.00d, extras));
-		variants.add(new ProductVariant("COFFEE_LARGE", ProductCategory.BEWERAGE, "Coffee (large)", 3.50d, extras));
-		
-		products.add(new Product("COFFEE", "Coffee", variants));
-
-		// orange
-
-		variants = new ArrayList();
-		extras = new ArrayList();
-		variants.add(new ProductVariant("ORANGEJUICE_FRESH", ProductCategory.BEWERAGE,
-				"Freshly squeezed orange juice (0.25l)", 3.95d, extras));
-		products.add(new Product("ORANGEJUICE", "Orange Juice", variants));
-
-		// Bacon
-
-		variants = new ArrayList();
-		extras = new ArrayList();
-		variants.add(new ProductVariant("BACON_ROLL", ProductCategory.SNACK, "Bacon Roll", 4.50d, extras));
-		products.add(new Product("BACON_ROLL", "Bacon Roll", variants));
-        
-		// init Shop
-		Shop.getInstance().initProducts(products);
+		Shop.getInstance().initProducts(ShopUtils.loadDefaultProducts());
 	}
 	
 	@Test

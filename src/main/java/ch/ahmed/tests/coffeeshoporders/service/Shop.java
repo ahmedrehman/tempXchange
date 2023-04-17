@@ -17,10 +17,8 @@ import ch.ahmed.tests.coffeeshoporders.data.ProductVariant;
 public class Shop {
 
 	private final List<Product> products = new ArrayList<Product>();
-	private final OrderManager orderManager;
-
+	
 	public Shop() {
-		this.orderManager = new OrderManager();
 	}
 
 	private static Shop instance;
@@ -34,10 +32,6 @@ public class Shop {
 
 	public List<Product> getProducts() {
 		return products;
-	}
-
-	public OrderManager getOrderManager() {
-		return orderManager;
 	}
 
 	public void initProducts(List<Product> products) {

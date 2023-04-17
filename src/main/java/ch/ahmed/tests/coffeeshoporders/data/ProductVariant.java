@@ -1,14 +1,15 @@
 package ch.ahmed.tests.coffeeshoporders.data;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductVariant {
+public class ProductVariant implements Serializable {
 	private String name;
 	private ProductCategory category;
 	private String label;
 	private double price;
-	private List<ProductExtra> awailableExtras= new ArrayList<ProductExtra>();
+	private List<ProductExtra> awailableExtras = new ArrayList<ProductExtra>();
 
 	public ProductVariant() {
 	}
@@ -24,21 +25,21 @@ public class ProductVariant {
 	}
 
 	public ProductExtra findProductExtraByName(String name) {
-		if(name==null)return null;
+		if (name == null)
+			return null;
 		return getAwailableExtras().stream()
-				.filter(prodExtra->prodExtra.getName()!=null && prodExtra.getName().equals(name))
-				.findFirst()
+				.filter(prodExtra -> prodExtra.getName() != null && prodExtra.getName().equals(name)).findFirst()
 				.orElse(null);
 	}
-	
+
 	public boolean isBeverage() {
-		return getCategory()!=null && getCategory()==ProductCategory.BEWERAGE;
+		return getCategory() != null && getCategory() == ProductCategory.BEWERAGE;
 	}
-	
+
 	public boolean isSnack() {
-		return getCategory()!=null && getCategory()==ProductCategory.SNACK;
+		return getCategory() != null && getCategory() == ProductCategory.SNACK;
 	}
-	
+
 	public String getName() {
 		return name;
 	}

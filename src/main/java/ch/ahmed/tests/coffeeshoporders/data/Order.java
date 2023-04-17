@@ -1,9 +1,10 @@
 package ch.ahmed.tests.coffeeshoporders.data;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Order {
+public class Order implements Serializable {
 	private long id;
 	private List<OrderItem> items = new ArrayList<OrderItem>();
 
